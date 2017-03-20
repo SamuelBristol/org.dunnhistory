@@ -24,12 +24,65 @@ a.btn-large:hover{
 .banner-height {
   max-height: 200px;
 }
+.fixed-action-btn-top-right{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    margin-bottom: 0;
+    z-index: 998;
+}
+.footer-copyright > a{
+  padding-left: 3rem;
+}
 .full-width {
   width: 100%;
 }
 .icon-align {
   vertical-align: middle;
 }
+.pinned {
+  z-index: 3;
+}
+.table-of-contents a, .table-of-contents a.active, .table-of-contents a:hover {
+  color: #FFFFFF;
+  border-left: 5px solid #FFFFFF;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+.table-of-contents a.active {
+  border-left: 5px solid #ffc107;
+  color: #ffc107;
+  text-decoration-color: #ffc107;
+}
+#backToTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  border: 3px solid #388E3C;
+  height: 3rem;
+  width: 3rem;
+}
+#content {
+  padding-left: 1rem;
+}
+#content > div {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#content h3 {
+  color: #212121;
+}
+#content p {
+  color: #757575;
+}
+#mission {
+  padding: 0;
+}
 #nav-mobile li a {
   color: white;
+}
+#pushpin-toc {
+  padding-left: 1rem;
 }

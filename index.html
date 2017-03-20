@@ -7,6 +7,10 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -16,7 +20,7 @@
       <img class="responsive-img" src="http://dunnhistory.org/images/dchs.gif" />
     </div>
   </div>
-  <nav class="green darken-3 z-depth-2" role="navigation">
+  <nav id="pushpin-navbar" class="green darken-3 z-depth-2" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">DCHS</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="about.html">About Us</a></li>
@@ -26,55 +30,63 @@
         <li><a href="#">History Links</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
-
-      <ul id="nav-mobile" class="side-nav green">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="#">Historical Sites</a></li>
-        <li><a href="events.html">Calendar Of Events</a></li>
-        <li><a href="#">Gift Shop</a></li>
-        <li><a href="#">History Links</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="large material-icons">menu</i>
+      </a>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
+  <ul id="nav-mobile" class="side-nav green">
+    <div class="fixed-action-btn-top-right">
+        <a id="closeMobileNav" href="#">
+          <i class="white-text fa fa-times-circle-o fa-3x"></i>
+        </a>
+    </div>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="#">Historical Sites</a></li>
+    <li><a href="events.html">Calendar Of Events</a></li>
+    <li><a href="#">Gift Shop</a></li>
+    <li><a href="#">History Links</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+
+  <div class="no-pad-bot" id="index-banner">
+    <div class="">
 
 
       <div class="row">
         <div class="slider">
           <ul class="slides z-depth-5">
             <li>
-              <img src="http://lorempixel.com/580/250/nature/5"> <!-- random image -->
+              <img src="http://lorempixel.com/1920/1080/nature/5"> <!-- random image -->
               <div class="caption center-align">
                 <h3>Keeping The Past Alive</h3>
                 <h5 class="light grey-text text-lighten-3">Dunn County Historical
                   Society discovers, preserves, and interprets the history of Dunn
                   County.</h5>
-                  <a class="waves-effect waves-light btn-large" href="about.html">About Us</a>
+                  <a class="z-depth-5 amber waves-effect waves-light btn-large" href="about.html">About Us</a>
               </div>
             </li>
             <li>
-              <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+              <img src="http://lorempixel.com/1920/1080/nature/2"> <!-- random image -->
               <div class="caption left-align">
                 <h3>Become A Member</h3>
-                <h5 class="light grey-text text-lighten-3">As a DCHS member you'll
-                  have many exciting and historical opportunities. Explore the
-                  Russell J. Rassbach Heritage Museum located in Menomonie's Wakanda
-                  Park, or picnic at the Caddie Woodlawn Historical Park.</h5>
-                  <a class="waves-effect waves-light btn-large" href="about.html#membership">Get Started</a>
+                <h5 class="light grey-text text-lighten-3">Explore the many
+                  exciting and historical opportunities the Dunn County
+                  Historical Society has to offer.
+                </h5>
+                  <a class="z-depth-5 amber waves-effect waves-light btn-large" href="about.html#membership">Get Started</a>
               </div>
             </li>
             <li>
-              <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+              <img src="http://lorempixel.com/1920/1080/nature/3"> <!-- random image -->
               <div class="caption right-align">
                 <h3>Become A Partner</h3>
                 <h5 class="light grey-text text-lighten-3">
                   Join us in our mission by supporting the services we provide
                   to the area.
                 </h5>
-                <a class="waves-effect waves-light btn-large" href="about.html#membership">Get Started</a>
+                <a class="z-depth-5 amber waves-effect waves-light btn-large" href="about.html#partners">Get Started</a>
 
               </div>
             </li>
@@ -85,7 +97,7 @@
   </div>
 
 
-  <div class="container">
+  <div>
       <div class="row">
         <div class="col s12 m6">
           <div class="card">
@@ -94,7 +106,8 @@
             </div>
             <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">
-              Rassbach Heritage Museum<i class="material-icons right">more_vert</i></span>
+              <h5>Rassbach Heritage Museum</h5>
+            </span>
             </div>
             <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">
@@ -109,17 +122,21 @@
         </div>
 
         <div class="col s12 m6">
-          <div class="icon-block">
-            <h2 class="green-text text-darken-2">Contact</h2>
-
-            <p class="light">
-              <address>
-                <a href="http://dunnhistory.org">Dunn County Historical Society</a><br />
-                PO Box 437<br />
-                Menomonie, WI 54751<br />
-                <a href="tel:7152328685">715-232-8685</a>
-              </address>
-            </p>
+          <div class="card">
+            <div class="card-image">
+              <div class="video-container">
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?q=Rassbach%20Heritage%20Museu&key=AIzaSyDxIm-ZQ4AosnJKeJxxKkpCrj1JcDkmgH8"
+                frameborder="0"
+                allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="row center-align">
+                <div class="col s6"><a href="#"><i class="material-icons icon-align">phone</i> Call</a></div>
+                <div class="col s6"><a href="#"><i class="material-icons icon-align">email</i> Email</a></div>
+              </div>
+            </div>
           </div>
         </div>
       </div><!-- end row -->
@@ -139,30 +156,26 @@
 
 
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+        <div class="col l4 s12 white-text">
+          <h5>Contact</h5>
+          <p class="light">
+            <address>
+              <a href="http://dunnhistory.org">Dunn County Historical Society</a><br />
+              PO Box 437<br />
+              Menomonie, WI 54751<br />
+              <a href="tel:7152328685">715-232-8685</a>
+            </address>
+          </p>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+        <div class="col l2 s12 white-text">
+          <h5>Connect</h5>
+          <img src="http://www.aam-us.org/Sitefinity/WebsiteTemplates/AAMBASE/App_Themes/App_Themes/AAMBASE/_img/aam_logo.gif" />
+          <img height="100px" src="https://www.facebook.com/images/fb_icon_325x325.png" />
         </div>
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
       <a class="white-text text-lighten-3" href="http://dunnhistory.org">&copy 2017 Dunn County Historical Society</a>
-      </div>
     </div>
   </footer>
 
